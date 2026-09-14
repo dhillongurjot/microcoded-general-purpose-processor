@@ -1,0 +1,11 @@
+# build artifacts
+db/
+incremental_db/
+output_files/
+simulation/
+*.qws
+*.bak
+*.rpt
+*.sof
+*.pof
+.DS_Store
