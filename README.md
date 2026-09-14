@@ -5,8 +5,6 @@ built from discrete components rather than an off-the-shelf core: two storage la
 a finite state machine, a 4-to-16 decoder generating microcode, and an ALU whose
 operation is selected entirely by that microcode.
 
-Built for COE 328 (Digital Systems) at Toronto Metropolitan University, Fall 2025.
-
 ![The design running on the DE2](docs/de2-board-running.png)
 
 *Running on hardware. The left seven-segment pair shows the FSM's current state output;
