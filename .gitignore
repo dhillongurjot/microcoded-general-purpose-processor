@@ -9,3 +9,5 @@ simulation/
 *.sof
 *.pof
 .DS_Store
+_excluded/
+_QUARANTINE*
