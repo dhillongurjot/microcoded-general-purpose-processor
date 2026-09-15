@@ -11,3 +11,8 @@ simulation/
 .DS_Store
 _excluded/
 _QUARANTINE*
+src/db/
+src/output_files/
+src/simulation/
+src/incremental_db/
+*.bak

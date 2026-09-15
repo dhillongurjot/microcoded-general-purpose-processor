@@ -103,11 +103,38 @@ leaves simulation and runs on real silicon.
 VHDL · Intel Quartus Prime · Altera DE2 (Cyclone II) · schematic block design (BDF)
 for top-level integration · Quartus waveform simulation
 
+---
+
+## Source
+
+```
+src/
+  fsm_lab6.vhd      state machine driving the decoder
+  fsm_lab6_2.vhd    extended FSM for the later problem sets
+  decoder.vhd       4:16 decoder -> 16-bit one-hot microcode
+  dec4to16.vhd      decoder variant
+  dec3to8.vhd       3:8 decoder
+  decoder_3.vhd     decoder used by the third ALU variant
+  alu.vhd           ALU variant 1 - nine arithmetic and logic operations
+  alu2.vhd          ALU variant 2 - shift, rotate, bit-reversal, min(A,B)
+  alu3.vhd          ALU variant 3 - state-dependent conditional evaluation
+  register8.vhd     positive-edge 8-bit latch
+  seg7.vhd          seven-segment decoder
+  sseg3.vhd         seven-segment helper
+  lab6.bdf          top-level schematic, problem set 1
+  lab6_2.bdf        top-level schematic, problem set 2
+  lab6_3.bdf        top-level schematic, problem set 3
+```
+
+Open `lab6.bdf` in Quartus Prime to see how the components connect; the `.vhd` files
+are the components themselves.
+
 ## Notes
 
-- **Source is not published here.** This repository documents the design; the VHDL
-  remains coursework for an active course. Happy to walk through the implementation
-  in an interview.
+- One FSM originally cycled through a student number as its input digits. Those digits
+  were personal data, so they have been **replaced with a neutral 1-9 sequence** for
+  public release — the state machine's structure, transitions and timing are unchanged.
+- Quartus build output (`db/`, `output_files/`, `simulation/`) is intentionally excluded.
 - The seven-segment display driver was provided in the course, not authored here.
 - Completed with a lab partner; the FSM, decoder, ALU variants and hardware bring-up
   described above are joint work.
